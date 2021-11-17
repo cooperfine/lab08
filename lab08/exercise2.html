@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+    <img src="soda/bargs.jpg" id="img" width="400" height="700">
+    <!--<img src="coke.jpg" id="img0" width="400" height="700">
+    <img src="pepsi.jpg" id="img1" width="400" height="700">
+    <img src="sprite.jpg" id="img2" width="400" height="700">
+    <img src="dp.jpg" id="img3" width="400" height="700">
+    <img src="bargs.jpg" id="img4" width="400" height="700"> -->
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+</body>
+
+  <script type="text/javascript">
+  let arr = ["bargs.jpg", "coke.jpg", "dp.jpg", "pepsi.jpg", "sprite.jpg"];
+  let img = document.getElementById("img");
+  let count = 0;
+
+  function next() {
+    if(count == 4) {
+      count = 0;
+    } 
+    else {
+      count++;
+    }
+  img.src = "soda/" + arr[count];
+  }
+  function previous() {
+    if(count == 0) {
+      count = 4;
+    } 
+    else {
+      count--;
+    }
+  img.src = "soda/" + arr[count];
+  }
+</script>
+</html>

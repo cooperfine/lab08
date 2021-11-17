@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+  <input type="text" id="password1" name="pass1"></br>
+  <input type="text" id="password2" name="pass2"></br>
+  <button onclick="validate()">Validate</button>
+
+</body>
+<script type="text/javascript">
+    
+
+  function validate() {
+  
+    let p1 = document.getElementById("password1");
+    let p2 = document.getElementById("password2");
+    if(p1.value != p2.value) {alert("PASSWORD DOES NOT MATCH");}
+    else {
+      if(p1.value.length > 7) { 
+	alert("PASSWORD VALIDATED"); 
+      } 
+      else { 
+        alert("PASSWORD NOT LONG ENOUGH"); 
+      }
+    } 
+  }  
+
+</script>
+</html> 
+
+

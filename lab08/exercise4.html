@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+</head>
+
+<body>
+
+  <h id="text">I knew I would be an engineer from a young age. The question however, was what area did I want to pursue. I spent my high school career taking class that I thought I might be interested in and would pertain to a certain engineering field. Chemistry was what I disliked the most and knew right away that was not for me. The next was physics and this class I really enjoyed. After taking this class my sophmore year, I was the teachers aid my junior year. During my junior year I decided to take a programming class and knew it was for me. For the next two years I took every class related to programming I could find and fell in love with it. Now I'm a senior in Computer Engineering at Kansas University and am excited to graduate.<h>
+  <canvas width="1280" height = 500 id="canvas" background= "white"></canvas>
+  <input type="text" id="borderR" name="border">Border Color Red</br>
+  <input type="text" id="borderG" name="border">Border Color Green</br>
+  <input type="text" id="borderB" name="border">Border Color Blue</br>
+
+  <input type="value" id="colorR" name="color">Background Color Red</br>
+  <input type="value" id="colorG" name="color">Background Color Green</br>
+  <input type="value" id="colorB" name="color">Background Color Blue</br>
+
+  <input type="value" id="width" name="width">Border Width</br>
+  <button onclick="rbg()">Configure</button>  
+</body>
+
+<script type="text/javascript">    
+  
+  function rbg() {
+    let c = document.getElementById('canvas');
+    let context = c.getContext('2d');
+    let width = document.getElementById("width").value;
+    let borderR = document.getElementById("borderR").value;
+    let borderB = document.getElementById("borderB").value;
+    let borderG = document.getElementById("borderG").value;
+    let backgroundR = document.getElementById("colorR").value;
+    let backgroundB = document.getElementById("colorB").value;
+    let backgroundG = document.getElementById("colorG").value;
+    
+
+    //var context = c.getContext('2d');
+ /*   let paragraph = "I knew I would be an engineer from a young age. The question however, was what area did I want to pursue. I spent my high school career taking class that I thought I might be interested in and would pertain to a certain engineering field. Chemistry was what I disliked the most and knew right away that was not for me. The next was physics and this class I really enjoyed. After taking this class my sophmore year, I was the teachers aid my junior year. During my junior year I decided to take a programming class and knew it was for me. For the next two years I took every class related to programming I could find and fell in love with it. Now I'm a senior in Computer Engineering at Kansas University and am excited to graduate.";
+   */ context.width = width;
+      console.log(width);
+      let colorBR = "rgb("+ borderR.value+", "+ borderG.value+", "+ borderB.value+")";
+      //context.beginPath(); 
+      context.strokeStyle = colorBR;
+      context.stroke();
+      //context.strokeRect = (20,20,width,600);
+ 
+      let colorBG = "rgb(" + backgroundR.value+", "+ backgroundG.value+", "+ backgroundB.value+")"; 
+     // context.beginPath();
+      context.fillStyle = colorBG;
+      context.fill();
+      //context.textAlign = 'start';
+      //context.fillText(paragraph, width, 700);
+      context.background = colorBG;
+
+}
+
+</script>
+</html> 
+
